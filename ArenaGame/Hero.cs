@@ -32,7 +32,7 @@ namespace ArenaGame
         }
 
         // returns actual damage
-        public virtual double Attack()
+        public virtual double Attack(Hero defender)
         {
             double totalDamage = Strenght + Weapon.AttackDamage;
             double coef = random.Next(80, 120 + 1);
@@ -41,11 +41,11 @@ namespace ArenaGame
 
             if (attackCounter % 3 == 0)
             {
-                Weapon.HyperAbility(this, null); // Hyper ability every third attack
+                Weapon.HyperAbility(this, defender); // Hyper ability every third attack
             }
             else
             {
-                Weapon.SuperAbility(this, null); // Super ability otherwise
+                Weapon.SuperAbility(this, defender); // Super ability otherwise
             }
 
             return realDamage;

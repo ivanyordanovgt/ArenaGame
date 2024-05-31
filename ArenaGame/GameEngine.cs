@@ -39,7 +39,7 @@ namespace ArenaGame
 
             while (attacker.IsAlive && defender.IsAlive)
             {
-                double attack = attacker.Attack();
+                double attack = attacker.Attack(defender);
                 double actualDamage = defender.Defend(attack);
 
                 NotificationsCallBack?.Invoke(new NotificationArgs()
