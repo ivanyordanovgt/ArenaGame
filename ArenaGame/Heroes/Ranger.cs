@@ -9,26 +9,32 @@ namespace ArenaGame.Heroes
     public class Ranger : Hero
     {
         private int attackCounter;
+        private int superAbilityCounter;
+
 
         public Ranger(string name, double armor, double strength, IWeapon weapon)
             : base(name, armor, strength, weapon)
         {
             attackCounter = 0;
+            superAbilityCounter = 0;
         }
 
-        public override double Attack()
+        public override double Attack(Hero defender)
         {
             double damage = base.Attack();
+            damage += this.weapon.AttackDamage
             attackCounter++;
 
-            if (attackCounter == 3)
+            if (superAbilityCounter == 3)
             {
-                Weapon.HyperAbility(this, null);
-                attackCounter = 0;
+                Weapon.HyperAbility(this, defender);
+                superAbilityCounter++;
             }
-            else
+            if (attackCounter == 3) { }
             {
-                Weapon.SuperAbility(this, null);
+                Weapon.SuperAbility(this, defender);
+                superAbilityCounter++;
+                attackCounter = 0;
             }
 
             return damage;
