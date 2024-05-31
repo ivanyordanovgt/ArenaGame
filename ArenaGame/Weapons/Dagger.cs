@@ -20,13 +20,13 @@ namespace ArenaGame.Weapons
 
         public void SuperAbility(Hero attacker, Hero defender)
         {
-            // Mace reduces opponent's armor
+            // Dagger reduces opponent's armor
             defender.ReduceArmor(10);
         }
 
         public void HyperAbility(Hero attacker, Hero defender)
         {
-            // Mace greatly reduces opponent's armor
+            // Dagger greatly reduces opponent's armor
             defender.TakeTrueDamage(25);
         }
     }
