@@ -1,7 +1,7 @@
 ### Решение
 
 ### IWeapon
- Добавих ```SuperAbility```  и ```HyperAbility```. Всяко трето ```SuperAbility``` се превръща в ```HyperAblity```.<br>
+ Добавих ```SuperAbility```  и ```HyperAbility```. Всяка трета атака е ```SuperAbility```, а всяко трето ```SuperAbility``` се превръща в ```HyperAblity```.<br>
  [IWeapon.cs](https://github.com/ivanyordanovgt/ArenaGame/blob/master/ArenaGame/IWeapon.cs)
 ### Hero
  Добавих ```ReduceArmor```, ```TakeTrueDamage``` методи. <br>
